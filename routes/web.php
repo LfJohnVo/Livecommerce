@@ -18,5 +18,6 @@ Route::get('/', function () {
 });
 
 Auth::routes();
-
 Route::get('/home', 'HomeController@index')->name('home');
+//Route::get('/crear', [Livewire\Product\Create::class])->name('products.create');
+Route::get('/crear', \App\Product::class);
