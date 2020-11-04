@@ -1,0 +1,15 @@
+language: php
+
+php:
+  - 7.3
+  - 7.4
+
+os: linux
+
+before_script:
+  - composer install
+  - cp .env.example .env
+  - php artisan key:generate
+
+script:
+  - vendor/bin/phpunit
