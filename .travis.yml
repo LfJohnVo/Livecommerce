@@ -1,15 +1,31 @@
 language: php
 
 php:
-  - 7.3
   - 7.4
 
 os: linux
 
+services:
+  - mysql
+
 before_script:
-  - composer install
-  - cp .env.example .env
+  - chmod 777 -R storage
+  - cp .env.travis .env
+  - composer self-update
+  - composer install --no-interaction
   - php artisan key:generate
+  - mysql -e 'create database homestead_test;'
+  - php artisan migrate
+  - pear install pear/PHP_CodeSniffer
+  - phpenv rehash
+  - npm install
+  - npm run dev
 
 script:
-  - vendor/bin/phpunit
+  - vendor/bin/phpunit --coverage-text
+  - npm run production
+
+cache:
+  directories:
+    - node_modules
+    - vendor
