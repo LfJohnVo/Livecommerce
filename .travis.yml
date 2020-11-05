@@ -14,11 +14,6 @@ before_script:
   - php artisan key:generate
   - composer self-update
   - composer install --prefer-source --no-interaction --dev
-  - php artisan migrate --no-interaction -vvv
-  - pear install pear/PHP_CodeSniffer
-  - phpenv rehash
-  - npm install
-  - npm run dev
   - php artisan migrate
 
 before_install:
@@ -26,9 +21,6 @@ before_install:
 
 script:
   - vendor/bin/phpunit --coverage-text
-  - phpcs --ignore=app/Http/Controllers/Auth,app/Http/Controllers/Controller.php app/Http/Controllers
-  - npm run production
-  - jshint resources/assets/js/modules/*
 
 cache:
   directories:
