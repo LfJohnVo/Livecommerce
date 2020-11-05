@@ -8,22 +8,21 @@ os: linux
 services:
   - mysql
 
-before_install:
-  - php
-
 before_script:
   - chmod 777 -R storage
-  - cp .env.example .env
-  - mysql -e 'CREATE DATABASE livecommerce;'
+  - cp .env.travis .env
   - php artisan key:generate
-  - composer install --no-interaction
+  - composer self-update
+  - composer install --prefer-source --no-interaction --dev
   - php artisan migrate --no-interaction -vvv
   - pear install pear/PHP_CodeSniffer
   - phpenv rehash
   - npm install
   - npm run dev
-  - php artisan migrate --no-interaction
+  - php artisan migrate
 
+before_install:
+  - mysql -e 'CREATE DATABASE livecommerce;'
 
 script:
   - vendor/bin/phpunit --coverage-text
@@ -35,3 +34,6 @@ cache:
   directories:
     - node_modules
     - vendor
+
+notifications:
+  email: false
