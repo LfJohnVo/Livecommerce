@@ -6,10 +6,36 @@ php:
 
 os: linux
 
+services:
+  - mysql
+
+before_install:
+  - php
+
 before_script:
-  - composer install
+  - chmod 777 -R storage
   - cp .env.example .env
+  - mysql -e 'CREATE DATABASE livecommerce;'
   - php artisan key:generate
+  - composer install --no-interaction
+  - php artisan migrate --no-interaction -vvv
+  - pear install pear/PHP_CodeSniffer
+  - phpenv rehash
+  - nvm install 7.7.1
+  - npm install npm@latest -g
+  - npm install -g jshint
+  - npm install
+  - npm run dev
+  - php artisan migrate
+
 
 script:
-  - vendor/bin/phpunit
+  - vendor/bin/phpunit --coverage-text
+  - phpcs --ignore=app/Http/Controllers/Auth,app/Http/Controllers/Controller.php app/Http/Controllers
+  - npm run production
+  - jshint resources/assets/js/modules/*
+
+cache:
+  directories:
+    - node_modules
+    - vendor
