@@ -20,12 +20,9 @@ before_script:
   - php artisan migrate --no-interaction -vvv
   - pear install pear/PHP_CodeSniffer
   - phpenv rehash
-  - nvm install 7.7.1
-  - npm install npm@latest -g
-  - npm install -g jshint
   - npm install
   - npm run dev
-  - php artisan migrate
+  - php artisan migrate --no-interaction
 
 
 script:
