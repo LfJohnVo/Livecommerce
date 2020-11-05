@@ -90,7 +90,7 @@ return [
             'prefix' => '',
             'prefix_indexes' => true,
         ],
-        
+
         'testing' => [
             'driver'    => 'mysql',
             'host'      => env('DB_TEST_HOST', 'localhost'),
