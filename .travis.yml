@@ -13,11 +13,9 @@ before_script:
   - cp .env.travis .env
   - php artisan key:generate
   - composer self-update
-  - composer install --prefer-source --no-interaction --dev
-  - php artisan migrate
-
-before_install:
+  - composer install --prefer-source --no-interaction
   - mysql -e 'CREATE DATABASE livecommerce;'
+  - php artisan migrate
 
 script:
   - vendor/bin/phpunit --coverage-text
