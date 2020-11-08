@@ -1,5 +1,5 @@
 <p align="center">
-	<img src="Livecommerce.gif"/>
+	<img src="Livecommerce.gif" style="width: 20%"/>
 </p>
 
 <p align="center">
@@ -15,6 +15,6 @@
 </p>
 
 
-## Livewire Ecommerce Platform
+<h1 align="center"> Livewire Ecommerce Platform</h1>
 
-<p>This is a e-commerce platform I made powered Laravel 8</p>
+<p align="center">This is a e-commerce platform I made powered Laravel 8</p>
