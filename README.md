@@ -1,5 +1,5 @@
 <p align="center">
-	<img src="Livecommerce.gif" style="width: 20%"/>
+	<img src="Livecommerce.gif" style="width: 10%"/>
 </p>
 
 <p align="center">
