@@ -1,5 +1,5 @@
 <p align="center">
-	<img src="Livecommerce.gif"/>
+	<img src="Livecommerce.gif" style="width: 20%"/>
 </p>
 
 <p align="center">
@@ -12,9 +12,12 @@
     <a href="https://travis-ci.org/LfJohnVo/Livecommerce">
         <img src="https://travis-ci.org/LfJohnVo/Livecommerce.svg?branch=main"/>
     </a>
+    <a href="https://github.com/LfJohnVo/Livecommerce/blob/main/License.md">
+            <img src="https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square"/>
+        </a>
 </p>
 
 
-## Livewire Ecommerce Platform
+<h1 align="center"> Livewire Ecommerce Platform</h1>
 
-<p>This is a e-commerce platform I made powered Laravel 8</p>
+<p align="center">This is a e-commerce platform I made powered Laravel 8</p>
