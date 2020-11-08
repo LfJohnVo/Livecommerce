@@ -42,7 +42,7 @@ return [
     |
     */
 
-    'asset_url'  => "http://localhost/blog/public/",
+    'asset_url'  => "http://localhost/livewire/public/",
 
     /*
     |--------------------------------------------------------------------------
