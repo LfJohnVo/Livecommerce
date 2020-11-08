@@ -12,6 +12,9 @@
     <a href="https://travis-ci.org/LfJohnVo/Livecommerce">
         <img src="https://travis-ci.org/LfJohnVo/Livecommerce.svg?branch=main"/>
     </a>
+    <a href="https://github.com/LfJohnVo/Livecommerce/blob/main/License.md">
+            <img src="https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square"/>
+        </a>
 </p>
 
 
