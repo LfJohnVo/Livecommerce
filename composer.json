@@ -16,7 +16,7 @@
         "laravel/tinker": "^2.0",
         "laravel/ui": "^3.1",
         "laraveles/spanish": "^1.5",
-        "livewire/livewire": "^2.3"
+        "livewire/livewire": "^1.0"
     },
     "require-dev": {
         "facade/ignition": "^2.3.6",

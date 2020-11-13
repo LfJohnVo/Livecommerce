@@ -29,3 +29,11 @@ cache:
   directories:
     - node_modules
     - vendor
+
+deploy:
+  provider: heroku
+  api_key:
+    secure: KEY
+  app: livecommerce-demo
+  on:
+    repo: LfJohnVo/Livecommerce
